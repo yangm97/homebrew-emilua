@@ -1,7 +1,7 @@
 class Emilua < Formula
   desc "Cross-platform LuaJIT engine with async IO and flexible threading"
   homepage "https://emilua.org/"
-  url "https://gitlab.com/emilua/emilua/-/archive/v0.11.2/emilua-v0.11.2.tar.gz"
+  url "https://gitlab.com/emilua/emilua/-/archive/v0.11.3/emilua-v0.11.3.tar.gz"
   sha256 "42c7ded56f0a0ede738c48b2303f850d4288ee0459c3753785de8799ed9f3476"
   license any_of: ["BSL-1.0", "MIT"]
   head "https://gitlab.com/emilua/emilua.git", branch: "emilua-0.11.x"
