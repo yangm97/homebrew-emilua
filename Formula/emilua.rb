@@ -6,6 +6,11 @@ class Emilua < Formula
   license any_of: ["BSL-1.0", "MIT"]
   head "https://gitlab.com/emilua/emilua.git", branch: "emilua-0.11.x"
 
+  bottle do
+    root_url "https://github.com/yangm97/homebrew-emilua/releases/download/emilua-0.11.3"
+    sha256 cellar: :any, arm64_sequoia: "a63becfc9ab6b4ea98059a053f9a8eb4f1792acee2887cc76a9bdf35bd454fbe"
+  end
+
   depends_on "asciidoctor" => :build
   depends_on "boost" => :build
   depends_on "cereal" => :build
