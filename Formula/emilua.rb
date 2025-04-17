@@ -4,7 +4,6 @@ class Emilua < Formula
   url "https://gitlab.com/emilua/emilua/-/archive/v0.11.3/emilua-v0.11.3.tar.gz"
   sha256 "9726354ec99f9f64a8693a0b5cda5703c0f245adcb402e7b77d673b17eab9126"
   license any_of: ["BSL-1.0", "MIT"]
-  head "https://gitlab.com/emilua/emilua.git", branch: "emilua-0.11.x"
 
   bottle do
     root_url "https://github.com/yangm97/homebrew-emilua/releases/download/emilua-0.11.3"
