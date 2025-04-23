@@ -28,9 +28,32 @@ class Emilua < Formula
   depends_on "serd"
   depends_on "sord"
 
+  on_linux do
+    fails_with :gcc do
+      version "11"
+      cause "requires GCC 12+"
+    end
+  
+    depends_on "gcc"
+    depends_on "libcap"
+  end
+
   def install
-    system "meson", "setup", "build", *std_meson_args, "-Deintr_rtsigno=0", "-Ddefault_library=static",
-"-Db_ndebug=true"
+    ENV["BOOST_INCLUDEDIR"] = Formula["boost"].include
+    ENV["BOOST_LIBRARYDIR"] = Formula["boost"].lib
+
+    args = if OS.mac?
+        %w[
+          -Db_ndebug=true
+          -Deintr_rtsigno=0
+          -Ddefault_library=static
+          ]
+        else
+          %w[
+            -Db_ndebug=true
+    ]
+    end
+    system "meson", "setup", "build", *std_meson_args, *args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
   end
