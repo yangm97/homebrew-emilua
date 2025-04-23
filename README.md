@@ -1,18 +1,3 @@
-# Yangm97 Emilua
+# This tap has been moved
 
-## How do I install these formulae?
-
-`brew install yangm97/emilua/<formula>`
-
-Or `brew tap yangm97/emilua` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "yangm97/emilua"
-brew "<formula>"
-```
-
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+Emilua now has an official homebrew tap, go use [that](https://gitlab.com/emilua/homebrew-emilua) instead.
